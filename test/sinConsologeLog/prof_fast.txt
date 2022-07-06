@@ -1,0 +1,867 @@
+Statistical profiling result from fast-v8.log, (5375 ticks, 3 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   2844   52.9%          /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+     73    1.4%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      5    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+      2    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     14    0.3%    0.6%  RegExp: [ \t]*<%_
+     11    0.2%    0.4%  LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      7    0.1%    0.3%  LazyCompile: *readPackage node:internal/modules/cjs/loader:296:21
+      5    0.1%    0.2%  LazyCompile: *resolve node:path:1091:10
+      4    0.1%    0.2%  LazyCompile: *serializeInto /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:550:23
+      4    0.1%    0.2%  LazyCompile: *normalizeString node:path:66:25
+      4    0.1%    0.2%  LazyCompile: *nextTick node:internal/process/task_queues:103:18
+      4    0.1%    0.2%  LazyCompile: *Long.add /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/long.js:253:35
+      4    0.1%    0.2%  Function: ^deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      3    0.1%    0.1%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      3    0.1%    0.1%  LazyCompile: *getEncodingOps node:buffer:682:24
+      3    0.1%    0.1%  LazyCompile: *emit node:events:484:44
+      3    0.1%    0.1%  LazyCompile: *Long /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/long.js:59:18
+      3    0.1%    0.1%  Function: ^emit node:events:484:44
+      2    0.0%    0.1%  LazyCompile: *write node:buffer:1055:40
+      2    0.0%    0.1%  LazyCompile: *scanLine /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:815:22
+      2    0.0%    0.1%  LazyCompile: *realpathSync node:fs:2474:22
+      2    0.0%    0.1%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      2    0.0%    0.1%  LazyCompile: *next /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:176:16
+      2    0.0%    0.1%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:635:37
+      2    0.0%    0.1%  Function: ^writeOrBuffer node:internal/streams/writable:368:23
+      2    0.0%    0.1%  Function: ^slice node:buffer:597:12
+      2    0.0%    0.1%  Function: ^processPromiseRejections node:internal/process/promises:220:34
+      2    0.0%    0.1%  Function: ^fromString /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:369:22
+      2    0.0%    0.1%  Function: ^command /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:247:12
+      2    0.0%    0.1%  Function: ^BinMsg /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:545:16
+      1    0.0%    0.0%  RegExp: _%>[ \t]*
+      1    0.0%    0.0%  RegExp: ^\uFEFF
+      1    0.0%    0.0%  RegExp: ^\/login\/?(?=\/|$)
+      1    0.0%    0.0%  RegExp: ^[a-zA-Z_$][0-9a-zA-Z_$]*$
+      1    0.0%    0.0%  RegExp: ^((?:(?:[0-9a-fA-F]{1,4}):){7}(?:(?:[0-9a-fA-F]{1,4})|:)|(?:(?:[0-9a-fA-F]{1,4}):){6}(?:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|:(?:[0-9a-fA-F]{1,4})|:)|(?:(?:[0-9a-fA-F]{1,4}):){5}(?::((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,2}|:)|(?:(?:[0-9a-fA-F]{1,4}):){4}(?:(:(?:[0-9a-fA-F]{1,4})){0,1}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,3}|:)|(?:(?:[0-9a-fA-F]{1,4}):){3}(?:(:(?:[0-9a-fA-F]{1,4})){0,2}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,4}|:)|(?:(?:[0-9a-fA-F]{1,4}):){2}(?:(:(?:[0-9a-fA-F]{1,4})){0,3}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,5}|:)|(?:(?:[0-9a-fA-F]{1,4}):){1}(?:(:(?:[0-9a-fA-F]{1,4})){0,4}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,6}|:)|(?::((?::(?:[0-9a-fA-F]{1,4})){0,5}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(?::(?:[0-9a-fA-F]{1,4})){1,7}|:)))(%[0-9a-zA-Z-.:]{1,})?$
+      1    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.0%  RegExp: (?:^|^)\s*(?:export\s+)?([\w.-]+)(?:\s*=\s*?|:\s+?)(\s*'(?:\\'|[^'])*'|\s*"(?:\\"|[^"])*"|\s*`(?:\\`|[^`])*`|[^#\r\n]+)?\s*(?:#.*)?(?:$|$)
+      1    0.0%    0.0%  RegExp: (<%%|%%>|<%=|<%-|<%_|<%#|<%|%>|-%>|_%>)
+      1    0.0%    0.0%  LazyCompile: *syncExports node:internal/bootstrap/loaders:304:14
+      1    0.0%    0.0%  LazyCompile: *serializeLong /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:300:23
+      1    0.0%    0.0%  LazyCompile: *remove node:internal/linkedlist:16:16
+      1    0.0%    0.0%  LazyCompile: *popAsyncContext node:internal/async_hooks:553:25
+      1    0.0%    0.0%  LazyCompile: *Readable.read node:internal/streams/readable:402:35
+      1    0.0%    0.0%  LazyCompile: *Module._resolveLookupPaths node:internal/modules/cjs/loader:673:38
+      1    0.0%    0.0%  LazyCompile: *Module._findPath node:internal/modules/cjs/loader:500:28
+      1    0.0%    0.0%  LazyCompile: *Long.compare /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/long.js:292:39
+      1    0.0%    0.0%  Function: ^writeU_Int32LE node:internal/buffer:690:24
+      1    0.0%    0.0%  Function: ^value node:internal/console/constructor:336:20
+      1    0.0%    0.0%  Function: ^unshift /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/denque/index.js:104:44
+      1    0.0%    0.0%  Function: ^trySelf node:internal/modules/cjs/loader:447:17
+      1    0.0%    0.0%  Function: ^trim_prefix /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:288:23
+      1    0.0%    0.0%  Function: ^toInteger node:buffer:193:19
+      1    0.0%    0.0%  Function: ^shift node:internal/fixed_queue:108:8
+      1    0.0%    0.0%  Function: ^shift /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/denque/index.js:120:40
+      1    0.0%    0.0%  Function: ^serverUpdateHandler /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:372:24
+      1    0.0%    0.0%  Function: ^serializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:258:25
+      1    0.0%    0.0%  Function: ^serializeNumber /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:43:25
+      1    0.0%    0.0%  Function: ^serialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/bson.js:111:19
+      1    0.0%    0.0%  Function: ^resetSocketTimeout node:_http_server:999:28
+      1    0.0%    0.0%  Function: ^render /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/response.js:994:29
+      1    0.0%    0.0%  Function: ^removeListener node:events:699:28
+      1    0.0%    0.0%  Function: ^readFileSync node:fs:464:22
+      1    0.0%    0.0%  Function: ^read /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:876:9
+      1    0.0%    0.0%  Function: ^pushAsyncContext node:internal/async_hooks:539:26
+      1    0.0%    0.0%  Function: ^processTimers node:internal/timers:492:25
+      1    0.0%    0.0%  Function: ^processIncomingData /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    0.0%    0.0%  Function: ^popAsyncContext node:internal/async_hooks:553:25
+      1    0.0%    0.0%  Function: ^originalurl /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/parseurl/index.js:65:22
+      1    0.0%    0.0%  Function: ^ondata node:internal/streams/readable:764:18
+      1    0.0%    0.0%  Function: ^normalizeParseOptions /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/qs/lib/parse.js:203:59
+      1    0.0%    0.0%  Function: ^newAsyncId node:internal/async_hooks:416:20
+      1    0.0%    0.0%  Function: ^matchLayer /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:578:20
+      1    0.0%    0.0%  Function: ^makeConnection /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:241:24
+      1    0.0%    0.0%  Function: ^lookup /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/view.js:104:40
+      1    0.0%    0.0%  Function: ^jsonParser /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/body-parser/lib/types/json.js:98:30
+      1    0.0%    0.0%  Function: ^isUint8Array node:internal/util/types:13:22
+      1    0.0%    0.0%  Function: ^isEmpty node:internal/fixed_queue:67:10
+      1    0.0%    0.0%  Function: ^initHooksExist node:internal/async_hooks:478:24
+      1    0.0%    0.0%  Function: ^hrtime node:internal/process/per_thread:79:16
+      1    0.0%    0.0%  Function: ^howMuchToRead node:internal/streams/readable:385:23
+      1    0.0%    0.0%  Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+      1    0.0%    0.0%  Function: ^handle /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:136:31
+      1    0.0%    0.0%  Function: ^getValidatedString /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:641:28
+      1    0.0%    0.0%  Function: ^getStatsFromBinding node:internal/fs/utils:533:29
+      1    0.0%    0.0%  Function: ^getSourceMapsEnabled node:internal/source_map/source_map_cache:43:30
+      1    0.0%    0.0%  Function: ^getRequestId /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:537:24
+      1    0.0%    0.0%  Function: ^getDefaultTriggerAsyncId node:internal/async_hooks:432:34
+      1    0.0%    0.0%  Function: ^getColorDepth node:internal/tty:106:23
+      1    0.0%    0.0%  Function: ^get node:internal/streams/writable:853:8
+      1    0.0%    0.0%  Function: ^get node:internal/streams/writable:790:8
+      1    0.0%    0.0%  Function: ^get loadBalanced /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:164:21
+      1    0.0%    0.0%  Function: ^get length /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:863:15
+      1    0.0%    0.0%  Function: ^get /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/debug/src/common.js:125:9
+      1    0.0%    0.0%  Function: ^fromString node:buffer:435:20
+      1    0.0%    0.0%  Function: ^from node:buffer:299:28
+      1    0.0%    0.0%  Function: ^formatWithOptionsInternal node:internal/util/inspect:2056:35
+      1    0.0%    0.0%  Function: ^format /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/content-type/index.js:65:17
+      1    0.0%    0.0%  Function: ^findLongestRegisteredExtension node:internal/modules/cjs/loader:419:40
+      1    0.0%    0.0%  Function: ^finalhandler /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/finalhandler/index.js:77:23
+      1    0.0%    0.0%  Function: ^extname node:path:1385:10
+      1    0.0%    0.0%  Function: ^exports.escapeXML /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/utils.js:94:30
+      1    0.0%    0.0%  Function: ^executeWithServerSelection /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/execute_operation.js:69:36
+      1    0.0%    0.0%  Function: ^execute /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/update.js:22:12
+      1    0.0%    0.0%  Function: ^errorHandler /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:288:26
+      1    0.0%    0.0%  Function: ^equals node:buffer:819:42
+      1    0.0%    0.0%  Function: ^dirname node:path:1275:10
+      1    0.0%    0.0%  Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1    0.0%    0.0%  Function: ^compareTopologyVersion /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/server_description.js:184:32
+      1    0.0%    0.0%  Function: ^command /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/server.js:151:12
+      1    0.0%    0.0%  Function: ^clearTimeout node:timers:185:22
+      1    0.0%    0.0%  Function: ^clearBuffer node:internal/streams/writable:532:21
+      1    0.0%    0.0%  Function: ^checkOut /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection_pool.js:121:13
+      1    0.0%    0.0%  Function: ^checkListener node:events:264:23
+      1    0.0%    0.0%  Function: ^basename node:path:1306:11
+      1    0.0%    0.0%  Function: ^append /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:867:11
+      1    0.0%    0.0%  Function: ^allocUnsafe node:buffer:376:42
+      1    0.0%    0.0%  Function: ^alignPool node:buffer:161:19
+      1    0.0%    0.0%  Function: ^addListener node:events:628:58
+      1    0.0%    0.0%  Function: ^addChunk node:internal/streams/readable:312:18
+      1    0.0%    0.0%  Function: ^_send node:_http_outgoing:329:49
+      1    0.0%    0.0%  Function: ^_copy node:buffer:203:15
+      1    0.0%    0.0%  Function: ^View /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/view.js:52:14
+      1    0.0%    0.0%  Function: ^SessionStrategy.authenticate /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/passport/lib/strategies/session.js:45:50
+      1    0.0%    0.0%  Function: ^Response /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:346:16
+      1    0.0%    0.0%  Function: ^Readable.on node:internal/streams/readable:886:33
+      1    0.0%    0.0%  Function: ^ObjectId /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/objectid.js:24:22
+      1    0.0%    0.0%  Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+      1    0.0%    0.0%  Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      1    0.0%    0.0%  Function: ^Long.isLong /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/long.js:237:28
+      1    0.0%    0.0%  Function: ^Long.fromBits /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/long.js:89:30
+      1    0.0%    0.0%  Function: ^FastBuffer node:internal/buffer:958:14
+      1    0.0%    0.0%  Function: ^Connection /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:40:16
+      1    0.0%    0.0%  Function: ^<anonymous> node:internal/fs/utils:689:40
+      1    0.0%    0.0%  Function: ^<anonymous> node:internal/console/constructor:355:10
+      1    0.0%    0.0%  Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:409:13
+      1    0.0%    0.0%  Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express-session/index.js:485:38
+
+ [C++]:
+   ticks  total  nonlib   name
+   1996   37.1%   81.4%  epoll_pwait
+     74    1.4%    3.0%  __write
+     25    0.5%    1.0%  fwrite
+     15    0.3%    0.6%  syscall
+     13    0.2%    0.5%  __pthread_cond_wait
+     13    0.2%    0.5%  _IO_file_xsputn
+     12    0.2%    0.5%  __libc_malloc
+     10    0.2%    0.4%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     10    0.2%    0.4%  __libc_read
+     10    0.2%    0.4%  __GI___pthread_rwlock_rdlock
+      9    0.2%    0.4%  std::ostream::sentry::sentry(std::ostream&)
+      5    0.1%    0.2%  __mprotect
+      5    0.1%    0.2%  __lll_lock_wait
+      4    0.1%    0.2%  cfree
+      4    0.1%    0.2%  __libc_realloc
+      4    0.1%    0.2%  __GI___pthread_rwlock_unlock
+      3    0.1%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      3    0.1%    0.1%  __GI___pthread_mutex_lock
+      2    0.0%    0.1%  std::ostream& std::ostream::_M_insert<long>(long)
+      2    0.0%    0.1%  sigaddset
+      2    0.0%    0.1%  shutdown
+      2    0.0%    0.1%  operator new(unsigned long)
+      2    0.0%    0.1%  operator delete[](void*)
+      2    0.0%    0.1%  epoll_ctl
+      2    0.0%    0.1%  __libc_write
+      2    0.0%    0.1%  __GI___pthread_mutex_unlock
+      2    0.0%    0.1%  _IO_setb
+      1    0.0%    0.0%  std::ostream::operator<<(int)
+      1    0.0%    0.0%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.0%    0.0%  operator new[](unsigned long)
+      1    0.0%    0.0%  getentropy
+      1    0.0%    0.0%  accept4
+      1    0.0%    0.0%  __popcountdi2
+      1    0.0%    0.0%  __mmap
+      1    0.0%    0.0%  __madvise
+      1    0.0%    0.0%  __libc_open
+      1    0.0%    0.0%  __errno_location
+      1    0.0%    0.0%  __close
+      1    0.0%    0.0%  __GI___pthread_rwlock_wrlock
+      1    0.0%    0.0%  __GI___pthread_once
+
+ [Summary]:
+   ticks  total  nonlib   name
+    202    3.8%    8.2%  JavaScript
+   2246   41.8%   91.6%  C++
+    143    2.7%    5.8%  GC
+   2924   54.4%          Shared libraries
+      3    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     63   38.2%    1.2%  __write
+     23   13.9%    0.4%  fwrite
+     15    9.1%    0.3%  syscall
+     13    7.9%    0.2%  _IO_file_xsputn
+      9    5.5%    0.2%  std::ostream::sentry::sentry(std::ostream&)
+      8    4.8%    0.1%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      7    4.2%    0.1%  __libc_malloc
+      3    1.8%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      3    1.8%    0.1%  __mprotect
+      2    1.2%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)
+      2    1.2%    0.0%  operator new(unsigned long)
+      2    1.2%    0.0%  operator delete[](void*)
+      2    1.2%    0.0%  cfree
+      2    1.2%    0.0%  __libc_write
+      2    1.2%    0.0%  __libc_read
+      2    1.2%    0.0%  _IO_setb
+      1    0.6%    0.0%  std::ostream::operator<<(int)
+      1    0.6%    0.0%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.6%    0.0%  operator new[](unsigned long)
+      1    0.6%    0.0%  __madvise
+      1    0.6%    0.0%  __libc_open
+      1    0.6%    0.0%  __GI___pthread_rwlock_wrlock
+      1    0.6%    0.0%  __GI___pthread_mutex_unlock
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2844   52.9%  /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+   1677   59.0%    /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+    457   27.3%      Function: ^compileFunction node:vm:309:25
+    384   84.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1024:18
+    380   99.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+    374   98.4%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      6    1.6%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      4    1.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1066:37
+      4  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1121:37
+     70   15.3%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1066:37
+     70  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+     62   88.6%            Function: ^Module.load node:internal/modules/cjs/loader:976:33
+      8   11.4%            LazyCompile: *Module.load node:internal/modules/cjs/loader:976:33
+     88    5.2%      /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+     11   12.5%        LazyCompile: *scanLine /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:815:22
+      8   72.7%          Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:742:32
+      8  100.0%            /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      3   27.3%          LazyCompile: *<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:742:32
+      3  100.0%            /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      6    6.8%        Function: ^exports.escapeRegExpChars /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/utils.js:39:38
+      6  100.0%          Function: ^createRegex /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:560:25
+      6  100.0%            Function: ^Template /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:509:18
+      5    5.7%        Function: ^readPackage node:internal/modules/cjs/loader:296:21
+      5  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:327:26
+      3   60.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      2   40.0%            Function: ^trySelf node:internal/modules/cjs/loader:447:17
+      4    4.5%        Function: ^command /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:247:12
+      4  100.0%          Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/server.js:193:42
+      4  100.0%            Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection_pool.js:265:23
+      3    3.4%        Function: ^scanLine /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:815:22
+      3  100.0%          Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:742:32
+      3  100.0%            /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      3    3.4%        Function: ^expressInit /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/middleware/init.js:29:30
+      3  100.0%          Function: ^handle /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            Function: ^trim_prefix /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:288:23
+      2    2.3%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      2    2.3%        Function: ^prepareStackTrace node:internal/errors:91:27
+      2  100.0%          /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      2  100.0%            Function: ^checkError node:internal/streams/destroy:23:20
+      2    2.3%        Function: ^pipe /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/send/index.js:510:43
+      2  100.0%          Function: ^serveStatic /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/serve-static/index.js:72:31
+      1   50.0%            LazyCompile: *handle /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/layer.js:86:49
+      1   50.0%            Function: ^handle /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/layer.js:86:49
+      2    2.3%        Function: ^onMessage /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:152:14
+      2  100.0%          Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:63:44
+      2  100.0%            LazyCompile: *emit node:events:484:44
+      2    2.3%        Function: ^fromString /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:369:22
+      2  100.0%          Function: ^ns /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:347:12
+      1   50.0%            LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:205:106
+      1   50.0%            Function: ^measureRoundTripTime /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/monitor.js:280:30
+      2    2.3%        Function: ^databaseNamespace /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:429:27
+      2  100.0%          Function: ^Msg /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:468:16
+      2  100.0%            Function: ^command /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:247:12
+      2    2.3%        Function: ^createRegex /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:560:25
+      2  100.0%          Function: ^Template /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:509:18
+      2  100.0%            Function: ^compile /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:381:35
+      2    2.3%        Function: ^FastBuffer node:internal/buffer:958:14
+      2  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      2  100.0%            Function: ^allocate node:buffer:401:18
+      1    1.1%        LazyCompile: ~trimControlChars /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb-connection-string-url/node_modules/whatwg-url/lib/url-state-machine.js:445:26
+      1  100.0%          Function: ^URLStateMachine /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb-connection-string-url/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%            LazyCompile: ~module.exports.basicURLParse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb-connection-string-url/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1    1.1%        LazyCompile: ~serialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/cookie/index.js:101:19
+      1  100.0%          LazyCompile: ~setcookie /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express-session/index.js:655:19
+      1  100.0%            LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express-session/index.js:220:28
+      1    1.1%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:475:36
+      1  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:543:30
+      1  100.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:543:30
+      1    1.1%        LazyCompile: ~prepareStackTrace node:internal/errors:91:27
+      1  100.0%          /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      1  100.0%            LazyCompile: ~getReport node:internal/process/report:32:12
+      1    1.1%        LazyCompile: ~parseIndexOptions /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:75:27
+      1  100.0%          LazyCompile: ~makeIndexSpec /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/indexes.js:39:23
+      1  100.0%            LazyCompile: ~CreateIndexOperation /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/indexes.js:119:16
+      1    1.1%        LazyCompile: ~parse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/dotenv/lib/main.js:8:16
+      1  100.0%          LazyCompile: ~config /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/dotenv/lib/main.js:55:17
+      1  100.0%            Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/utils/chat.js:1:1
+      1    1.1%        LazyCompile: ~o /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/yargs/build/index.cjs:1:937
+      1  100.0%          LazyCompile: ~h /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/yargs/build/index.cjs:1:1448
+      1  100.0%            LazyCompile: ~addHelpOpt /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/yargs/build/index.cjs:1:29399
+      1    1.1%        LazyCompile: ~isIPv6 node:internal/net:35:16
+      1  100.0%          LazyCompile: ~isIP node:internal/net:39:14
+      1  100.0%            LazyCompile: ~parseSslOptions /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:222:25
+      1    1.1%        LazyCompile: ~getIncludePath /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:156:24
+      1  100.0%          LazyCompile: ~includeFile /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:309:21
+      1  100.0%            LazyCompile: ~include /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:696:30
+      1    1.1%        LazyCompile: ~expressInit /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%          Function: ^handle /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:288:23
+      1    1.1%        LazyCompile: ~checkIsHttpToken node:_http_common:210:26
+      1  100.0%          LazyCompile: ~<anonymous> node:_http_outgoing:571:44
+      1  100.0%            LazyCompile: ~processHeader node:_http_outgoing:511:23
+      1    1.1%        LazyCompile: ~addLevels /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/log4js/lib/levels.js:45:19
+      1  100.0%          Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/log4js/lib/levels.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      1    1.1%        LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/yargs/build/index.cjs:1:56715
+      1  100.0%          LazyCompile: ~parse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/yargs/build/index.cjs:1:39583
+      1  100.0%            LazyCompile: ~get /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/yargs/build/index.cjs:1:61245
+      1    1.1%        LazyCompile: *realpathSync node:fs:2474:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:399:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:390:17
+      1    1.1%        LazyCompile: *Module._load node:internal/modules/cjs/loader:766:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    1.1%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:500:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:860:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1    1.1%        Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/graceful-fs/graceful-fs.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1    1.1%        Function: ^tryReadSync node:fs:443:21
+      1  100.0%          Function: ^readFileSync node:fs:464:22
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1    1.1%        Function: ^translatePeerCertificate node:_tls_common:125:34
+      1  100.0%          Function: ^translatePeerCertificate node:_tls_common:125:34
+      1  100.0%            Function: ^TLSSocket.getPeerCertificate node:_tls_wrap:987:50
+      1    1.1%        Function: ^stripSemi /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:364:19
+      1  100.0%          LazyCompile: *scanLine /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:815:22
+      1  100.0%            Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:742:32
+      1    1.1%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:500:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:860:35
+      1    1.1%        Function: ^resolve node:path:1091:10
+      1  100.0%          Function: ^readPackage node:internal/modules/cjs/loader:296:21
+      1  100.0%            Function: ^readPackageScope node:internal/modules/cjs/loader:327:26
+      1    1.1%        Function: ^parse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/cookie/index.js:48:15
+      1  100.0%          Function: ^getcookie /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express-session/index.js:529:19
+      1  100.0%            Function: ^session /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express-session/index.js:179:26
+      1    1.1%        Function: ^isURLInstance node:internal/url:1561:23
+      1  100.0%          LazyCompile: ~fileURLToPath node:internal/url:1482:23
+      1  100.0%            LazyCompile: ~finalizeEsmResolution node:internal/modules/cjs/loader:952:31
+      1    1.1%        Function: ^hasServer /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology_description.js:237:14
+      1  100.0%          Function: ^serverUpdateHandler /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:372:24
+      1  100.0%            Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:535:53
+      1    1.1%        Function: ^handle /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:136:31
+      1  100.0%          Function: ^handle /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/application.js:158:29
+      1  100.0%            Function: ^app /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/express.js:38:21
+      1    1.1%        Function: ^format /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/content-type/index.js:65:17
+      1  100.0%          Function: ^setCharset /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/utils.js:247:41
+      1  100.0%            Function: ^send /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/response.js:107:25
+      1    1.1%        Function: ^exports.escapeXML /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/utils.js:94:30
+      1  100.0%          Function: ^<anonymous> :1:20
+      1  100.0%            Function: ^anonymous /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:695:59
+      1    1.1%        Function: ^deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/bson.js:162:21
+      1    1.1%        Function: ^clone /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sessions.js:550:17
+      1  100.0%          Function: ^completeEndSession /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sessions.js:137:40
+      1  100.0%            Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sessions.js:132:52
+      1    1.1%        Function: ^cleanUsername /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/auth/scram.js:48:23
+      1  100.0%          Function: ^makeFirstMessage /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/auth/scram.js:61:26
+      1  100.0%            Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/auth/scram.js:25:32
+      1    1.1%        Function: ^asString /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/date-format/lib/index.js:29:18
+      1  100.0%          Function: ^timestampLevelAndCategory /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/log4js/lib/layouts.js:42:35
+      1  100.0%            Function: ^colouredLayout /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/log4js/lib/layouts.js:71:24
+      1    1.1%        Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1  100.0%            Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/semver/index.js:1:1
+      1    1.1%        Function: ^Module.load node:internal/modules/cjs/loader:976:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+      1    1.1%        Function: ^Module._findPath node:internal/modules/cjs/loader:500:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:860:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1    1.1%        Function: ^Module node:internal/modules/cjs/loader:172:16
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+      1    1.1%        Function: ^Mime.lookup /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mime/mime.js:69:33
+      1  100.0%          Function: ^contentType /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/response.js:599:32
+      1  100.0%            Function: ^send /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/response.js:107:25
+      1    1.1%        Function: ^<anonymous> node:internal/fs/utils:689:40
+      1  100.0%          Function: ^readSync node:fs:704:18
+      1  100.0%            Function: ^tryReadSync node:fs:443:21
+      1    1.1%        Function: ^<anonymous> node:internal/fs/utils:360:35
+      1  100.0%          Function: ^<anonymous> node:internal/fs/utils:671:38
+      1  100.0%            Function: ^<anonymous> node:internal/fs/utils:683:42
+      1    1.1%        Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:742:32
+      1  100.0%          /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      1  100.0%            Function: ^generateSource /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:721:28
+     62    3.7%      Function: ^TLSSocket.getPeerCertificate node:_tls_wrap:987:50
+     46   74.2%        Function: ^onConnectSecure node:_tls_wrap:1519:25
+     46  100.0%          Function: ^emit node:events:484:44
+     46  100.0%            Function: ^TLSSocket._finishInit node:_tls_wrap:921:43
+     16   25.8%        LazyCompile: ~onConnectSecure node:_tls_wrap:1519:25
+     16  100.0%          Function: ^emit node:events:484:44
+     12   75.0%            Function: ^TLSSocket._finishInit node:_tls_wrap:921:43
+      4   25.0%            LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:921:43
+     55    3.3%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     55  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     55  100.0%          Function: ^Socket._writeGeneric node:net:837:42
+     55  100.0%            Function: ^Socket._write node:net:874:35
+     40    2.4%      Function: ^SecureContext node:_tls_common:75:23
+     40  100.0%        Function: ^createSecureContext node:_tls_common:99:29
+     40  100.0%          Function: ^connect node:_tls_wrap:1600:35
+     40  100.0%            Function: ^makeConnection /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:241:24
+     36    2.1%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     26   72.2%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      4   15.4%          Function: ~<anonymous> node:tls:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4   15.4%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4   15.4%          Function: ~<anonymous> node:child_process:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3   11.5%          Function: ~<anonymous> node:http:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3   11.5%          Function: ~<anonymous> node:_http_client:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    7.7%          Function: ~<anonymous> node:internal/child_process:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    3.8%          LazyCompile: ~lazyWebCrypto node:crypto:125:23
+      1  100.0%            LazyCompile: ~get node:crypto:369:8
+      1    3.8%          LazyCompile: ~lazyLoadStreams node:fs:2907:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:3050:17
+      1    3.8%          Function: ~<anonymous> node:internal/cluster/round_robin_handle:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    3.8%          Function: ~<anonymous> node:assert:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    3.8%          Function: ~<anonymous> node:_http_server:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    3.8%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      9   25.0%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      9  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      9  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1    2.8%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:766:24
+     36    2.1%      Function: ^compile /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:571:21
+     36  100.0%        Function: ^compile /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:381:35
+     36  100.0%          Function: ^handleCache /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:210:21
+     25   69.4%            Function: ^includeFile /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:309:21
+     11   30.6%            Function: ^tryHandleCache /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:254:24
+     34    2.0%      LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+     19   55.9%        LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+     14   73.7%          Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+     14  100.0%            Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/bson.js:162:21
+      5   26.3%          LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      3   60.0%            Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+      2   40.0%            LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+     15   44.1%        Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+     15  100.0%          Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/bson.js:162:21
+     15  100.0%            Function: ^parse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:577:10
+     33    2.0%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     33  100.0%        Function: ^Socket._writeGeneric node:net:837:42
+     33  100.0%          Function: ^Socket._writev node:net:869:36
+     33  100.0%            Function: ^doWrite node:internal/streams/writable:401:17
+     30    1.8%      LazyCompile: ~configSecureContext node:internal/tls/secure-context:124:29
+     29   96.7%        LazyCompile: ~createSecureContext node:_tls_common:99:29
+     29  100.0%          LazyCompile: ~connect node:_tls_wrap:1600:35
+     29  100.0%            LazyCompile: ~makeConnection /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:241:24
+      1    3.3%        Function: ^createSecureContext node:_tls_common:99:29
+      1  100.0%          Function: ^connect node:_tls_wrap:1600:35
+      1  100.0%            Function: ^makeConnection /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:241:24
+     19    1.1%      Function: ^openSync node:fs:590:18
+     19  100.0%        Function: ^readFileSync node:fs:464:22
+     11   57.9%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+     11  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:976:33
+      8   42.1%          Function: ^fileLoader /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:292:20
+      8  100.0%            Function: ^handleCache /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:210:21
+     18    1.1%      Function: ^Hash node:internal/crypto/hash:58:14
+     18  100.0%        Function: ^createHash node:crypto:132:20
+      9   50.0%          Function: ^hash /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express-session/index.js:596:14
+      9  100.0%            Function: ^inflate /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express-session/index.js:371:22
+      5   27.8%          Function: ^entitytag /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/etag/index.js:39:20
+      5  100.0%            Function: ^etag /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/etag/index.js:70:15
+      4   22.2%          Function: ^sha1 /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/cookie-signature/index.js:49:14
+      4  100.0%            Function: ^exports.unsign /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/cookie-signature/index.js:36:26
+     17    1.0%      Function: ^slice node:buffer:597:12
+     10   58.8%        LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      7   70.0%          LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      5   71.4%            Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+      2   28.6%            LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      3   30.0%          Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+      3  100.0%            Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/bson.js:162:21
+      5   29.4%        Function: ^toString node:buffer:787:46
+      4   80.0%          Function: ^readFileSync node:fs:464:22
+      4  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1   20.0%          Function: ^deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            Function: ^deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      2   11.8%        LazyCompile: *toString node:buffer:787:46
+      2  100.0%          Function: ^deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1   50.0%            Function: ^deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1   50.0%            Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+     17    1.0%      Function: ^initialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/passport/lib/middleware/initialize.js:51:29
+     16   94.1%        Function: ^handle /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/layer.js:86:49
+     16  100.0%          Function: ^trim_prefix /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:288:23
+     10   62.5%            LazyCompile: *next /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:176:16
+      6   37.5%            Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:275:64
+      1    5.9%        LazyCompile: *handle /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: *next /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:176:16
+     34    1.2%    LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+     19   55.9%      Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+     19  100.0%        Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/bson.js:162:21
+     19  100.0%          Function: ^parse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:577:10
+     19  100.0%            Function: ^onMessage /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:152:14
+     15   44.1%      LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+     11   73.3%        Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+     11  100.0%          Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/bson.js:162:21
+     10   90.9%            Function: ^parse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:577:10
+      1    9.1%            Function: ^parse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:384:10
+      4   26.7%        LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      3   75.0%          Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+      3  100.0%            Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/bson.js:162:21
+      1   25.0%          LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+
+   1996   37.1%  epoll_pwait
+
+     74    1.4%  __write
+     56   75.7%    /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      4    7.1%      /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      1   25.0%        LazyCompile: ~module.exports.get_napi_build_versions /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:115:50
+      1  100.0%          LazyCompile: ~module.exports.expand_commands /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:94:42
+      1  100.0%            LazyCompile: ~parseOpts /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:144:37
+      1   25.0%        Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mquery/lib/mquery.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1   25.0%        Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/browserDocument.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1   25.0%        Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:290:15
+      3    5.4%      Function: ^emit node:events:484:44
+      1   33.3%        LazyCompile: ~onPollRequest /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/engine.io/build/transports/polling.js:58:18
+      1  100.0%          LazyCompile: ~onRequest /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/engine.io/build/transports/polling.js:40:14
+      1  100.0%            LazyCompile: ~handshake /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/engine.io/build/server.js:173:20
+      1   33.3%        LazyCompile: ~error /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/send/index.js:267:45
+      1  100.0%          LazyCompile: ~onStatError /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/send/index.js:416:57
+      1  100.0%            LazyCompile: ~next /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/send/index.js:732:17
+      1   33.3%        LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection_pool.js:380:34
+      1  100.0%          Function: ^emit node:events:484:44
+      1  100.0%            Function: ^onMessage /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:152:14
+      2    3.6%      LazyCompile: ~Faker /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/faker/lib/index.js:24:16
+      2  100.0%        Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/faker/index.js:1:1
+      2  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      2  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1    1.8%      LazyCompile: ~write node:buffer:1055:40
+      1  100.0%        LazyCompile: ~serializeString /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:20:25
+      1  100.0%          LazyCompile: ~serializeInto /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%            LazyCompile: ~serializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:258:25
+      1    1.8%      LazyCompile: ~toBin /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:82:10
+      1  100.0%        LazyCompile: ~writeCommand /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/message_stream.js:35:17
+      1  100.0%          LazyCompile: ~write /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:513:15
+      1  100.0%            LazyCompile: ~command /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:247:12
+      1    1.8%      LazyCompile: ~startSession /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:342:17
+      1  100.0%        LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1  100.0%          LazyCompile: ~maybePromise /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:397:22
+      1  100.0%            LazyCompile: ~executeOperation /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/execute_operation.js:11:26
+      1    1.8%      LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:168:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.8%      LazyCompile: ~setHeader node:_http_outgoing:601:57
+      1  100.0%        LazyCompile: ~setcookie /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express-session/index.js:655:19
+      1  100.0%          LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express-session/index.js:220:28
+      1  100.0%            LazyCompile: ~writeHead /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/on-headers/index.js:28:29
+      1    1.8%      LazyCompile: ~serializeDate /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:108:23
+      1  100.0%        Function: ^serializeInto /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%          Function: ^serializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:258:25
+      1  100.0%            Function: ^serializeInto /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:550:23
+      1    1.8%      LazyCompile: ~send /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/response.js:107:25
+      1  100.0%        Function: ^done /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/response.js:1011:27
+      1  100.0%          LazyCompile: ~tryHandleCache /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:254:24
+      1  100.0%            Function: ^exports.renderFile /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:441:31
+      1    1.8%      LazyCompile: ~realpathSync node:fs:2474:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:399:20
+      1  100.0%          LazyCompile: ~tryFile node:internal/modules/cjs/loader:390:17
+      1  100.0%            LazyCompile: ~tryExtensions node:internal/modules/cjs/loader:406:23
+      1    1.8%      LazyCompile: ~readSync node:fs:704:18
+      1  100.0%        LazyCompile: ~tryReadSync node:fs:443:21
+      1  100.0%          LazyCompile: ~readFileSync node:fs:464:22
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1    1.8%      LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.8%      LazyCompile: ~prepare /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/auth/scram.js:16:12
+      1  100.0%        LazyCompile: ~prepareHandshakeDocument /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:139:34
+      1  100.0%          LazyCompile: ~performInitialHandshake /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:62:33
+      1  100.0%            Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1    1.8%      LazyCompile: ~parserOnIncoming node:_http_server:894:26
+      1  100.0%        LazyCompile: ~parserOnHeadersComplete node:_http_common:72:33
+      1    1.8%      LazyCompile: ~parse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:577:10
+      1  100.0%        Function: ^onMessage /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:152:14
+      1  100.0%          Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:63:44
+      1  100.0%            Function: ^emit node:events:484:44
+      1    1.8%      LazyCompile: ~openSync node:fs:590:18
+      1  100.0%        LazyCompile: ~readFileSync node:fs:464:22
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:976:33
+      1    1.8%      LazyCompile: ~onWriteComplete node:internal/stream_base_commons:80:25
+      1    1.8%      LazyCompile: ~onClose /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/engine.io/build/transports/polling.js:303:25
+      1  100.0%        LazyCompile: ~doClose /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/engine.io/build/transports/polling.js:296:12
+      1  100.0%          LazyCompile: ~close /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/engine.io/build/transport.js:59:10
+      1  100.0%            LazyCompile: ~clearTransport /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/engine.io/build/socket.js:267:19
+      1    1.8%      LazyCompile: ~module.exports.basicURLParse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb-connection-string-url/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%        LazyCompile: ~URLImpl /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb-connection-string-url/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1  100.0%          LazyCompile: ~exports.setup /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb-connection-string-url/node_modules/whatwg-url/lib/URL.js:49:17
+      1  100.0%            LazyCompile: ~URL /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb-connection-string-url/node_modules/whatwg-url/lib/URL.js:90:16
+      1    1.8%      LazyCompile: ~listenInCluster node:net:1460:25
+      1  100.0%        LazyCompile: ~Server.listen node:net:1503:35
+      1  100.0%          Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/server.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1066:37
+      1    1.8%      LazyCompile: ~get serverSession /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sessions.js:85:22
+      1  100.0%        LazyCompile: ~applySession /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sessions.js:652:22
+      1  100.0%          Function: ^command /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:247:12
+      1  100.0%            LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/server.js:193:42
+      1    1.8%      LazyCompile: ~fromOptions /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/read_preference.js:76:23
+      1  100.0%        LazyCompile: ~resolveOptions /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:739:24
+      1  100.0%          LazyCompile: ~collection /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/db.js:192:15
+      1  100.0%            LazyCompile: ~NativeCollection.onOpen /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:45:45
+      1    1.8%      LazyCompile: ~forEachCode /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/http-errors/index.js:265:38
+      1  100.0%        /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      1  100.0%          LazyCompile: ~populateConstructorExports /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/http-errors/index.js:264:37
+      1  100.0%            Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/http-errors/index.js:1:1
+      1    1.8%      LazyCompile: ~executeWithServerSelection /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/execute_operation.js:69:36
+      1  100.0%        LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1  100.0%          LazyCompile: ~maybePromise /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:397:22
+      1  100.0%            LazyCompile: ~executeOperation /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/execute_operation.js:11:26
+      1    1.8%      LazyCompile: ~execute /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/indexes.js:75:12
+      1  100.0%        LazyCompile: ~execute /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/indexes.js:127:12
+      1  100.0%          LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/execute_operation.js:138:61
+      1  100.0%            Function: ^processWaitQueue /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:589:26
+      1    1.8%      LazyCompile: ~emitStatistics node:internal/http:38:24
+      1  100.0%        Function: ^_finish node:_http_server:211:52
+      1  100.0%          Function: ^end node:_http_outgoing:912:45
+      1  100.0%            Function: ^writeend /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express-session/index.js:260:24
+      1    1.8%      LazyCompile: ~debug /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/node_modules/debug/src/debug.js:65:17
+      1  100.0%        LazyCompile: ~trim_prefix /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:288:23
+      1  100.0%          LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:275:64
+      1  100.0%            LazyCompile: ~process_params /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/router/index.js:333:47
+      1    1.8%      LazyCompile: ~consume /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ws/lib/receiver.js:93:10
+      1  100.0%        LazyCompile: ~getMask /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ws/lib/receiver.js:393:10
+      1  100.0%          Function: ^startLoop /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ws/lib/receiver.js:129:12
+      1  100.0%            LazyCompile: ~_write /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ws/lib/receiver.js:78:9
+      1    1.8%      LazyCompile: ~close /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:234:10
+      1  100.0%        LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/mongo_client.js:139:52
+      1  100.0%          Function: ^maybePromise /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:397:22
+      1  100.0%            LazyCompile: ~close /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/mongo_client.js:134:10
+      1    1.8%      LazyCompile: ~_log /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/log4js/lib/logger.js:104:7
+      1  100.0%        LazyCompile: ~log /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/log4js/lib/logger.js:82:6
+      1  100.0%          LazyCompile: ~Logger.<computed> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/log4js/lib/logger.js:146:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/server.js:43:20
+      1    1.8%      LazyCompile: ~_init /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/document.js:778:17
+      1  100.0%        LazyCompile: ~init /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/document.js:762:14
+      1  100.0%          LazyCompile: ~Document.$__init /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/document.js:710:38
+      1  100.0%            LazyCompile: ~syncWrapper /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/kareem/index.js:232:30
+      1    1.8%      LazyCompile: ~Socket.connect node:net:1007:36
+      1  100.0%        LazyCompile: ~connect node:_tls_wrap:1600:35
+      1  100.0%          LazyCompile: ~makeConnection /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:241:24
+      1  100.0%            LazyCompile: ~connect /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1    1.8%      LazyCompile: ~Schema.defaultOptions /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/schema.js:434:43
+      1  100.0%        LazyCompile: ~Schema /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/schema.js:95:16
+      1  100.0%          Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/DB/mensajeSchema.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      1    1.8%      LazyCompile: ~Readable.read node:internal/streams/readable:402:35
+      1  100.0%        LazyCompile: ~Socket.read node:net:690:33
+      1  100.0%          LazyCompile: ~initRead node:_tls_wrap:440:18
+      1  100.0%            LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.8%      LazyCompile: ~Query.find /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/query.js:2302:32
+      1  100.0%        LazyCompile: ~Query /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/query.js:92:15
+      1  100.0%          LazyCompile: ~model.Query /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/model.js:4895:25
+      1  100.0%            LazyCompile: ~find /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/model.js:2140:27
+      1    1.8%      LazyCompile: ~ObjectId /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/objectid.js:24:22
+      1  100.0%        Function: ^deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          Function: ^deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1    1.8%      LazyCompile: ~Long.isZero /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/long.js:505:38
+      1  100.0%        LazyCompile: ~cursorIsDead /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cursor/abstract_cursor.js:530:22
+      1  100.0%          LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cursor/abstract_cursor.js:437:42
+      1  100.0%            LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cursor/find_cursor.js:54:72
+      1    1.8%      LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongoose/lib/model.js:4992:15
+      1  100.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.8%      LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cursor/abstract_cursor.js:437:42
+      1  100.0%        LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cursor/find_cursor.js:54:72
+      1  100.0%          LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:409:13
+      1  100.0%            LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/operations/execute_operation.js:53:70
+      1    1.8%      LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/connection_string.js:66:45
+      1  100.0%        /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      1  100.0%          LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/connection_string.js:55:72
+      1  100.0%            LazyCompile: ~onresolve node:dns:270:19
+      1    1.8%      LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection_pool.js:364:44
+      1  100.0%        LazyCompile: ~callback /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1  100.0%          LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:128:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/auth/scram.js:152:83
+      1    1.8%      Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/streamroller/node_modules/fs-extra/lib/mkdirs/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:976:33
+      1    1.8%      Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/normalizr/dist/normalizr.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:976:33
+      1    1.8%      Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/finalhandler/node_modules/debug/src/node.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1066:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:976:33
+      1    1.8%      Function: ^processTimers node:internal/timers:492:25
+      1    1.8%      Function: ^onStreamRead node:internal/stream_base_commons:167:22
+      1    1.8%      Function: ^listOnTimeout node:internal/timers:512:25
+      1  100.0%        Function: ^processTimers node:internal/timers:492:25
+      1    1.8%      Function: ^Readable.on node:internal/streams/readable:886:33
+      1  100.0%        LazyCompile: ~Readable.pipe node:internal/streams/readable:666:35
+      1  100.0%          LazyCompile: ~Connection /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:40:16
+      1  100.0%            LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1    1.8%      Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1  100.0%            Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/socket.io/dist/broadcast-operator.js:1:1
+      7    9.5%    LazyCompile: *compileFunction node:vm:309:25
+      7  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1024:18
+      7  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      7  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      7  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:976:33
+
+     73    1.4%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     36   49.3%    /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      5   13.9%      /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      2   40.0%        LazyCompile: *scanLine /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:815:22
+      1   50.0%          LazyCompile: *<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:742:32
+      1  100.0%            /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      1   50.0%          Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:742:32
+      1  100.0%            /home/ivan/.nvm/versions/node/v18.4.0/bin/node
+      1   20.0%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:475:36
+      1  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:543:30
+      1  100.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:543:30
+      1   20.0%        Function: ^command /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:247:12
+      1  100.0%          Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1  100.0%            LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/auth/scram.js:25:32
+      1   20.0%        Function: ^_addOutput /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:788:24
+      1  100.0%          Function: ^scanLine /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:815:22
+      1  100.0%            Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:742:32
+      4   11.1%      Function: ^onStreamRead node:internal/stream_base_commons:167:22
+      3    8.3%      Function: ^compile /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:571:21
+      3  100.0%        Function: ^compile /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:381:35
+      3  100.0%          Function: ^handleCache /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:210:21
+      2   66.7%            Function: ^includeFile /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:309:21
+      1   33.3%            Function: ^tryHandleCache /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/ejs/lib/ejs.js:254:24
+      2    5.6%      Function: ^processTimers node:internal/timers:492:25
+      2    5.6%      Function: ^Module._findPath node:internal/modules/cjs/loader:500:28
+      2  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:860:35
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+      1    2.8%      LazyCompile: ~stateTransition /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:573:36
+      1  100.0%        LazyCompile: ~connect /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/server.js:96:12
+      1  100.0%          Function: ^createAndConnectServer /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:529:32
+      1  100.0%            LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:190:57
+      1    2.8%      LazyCompile: ~initializeGlobalConsole node:internal/console/constructor:687:33
+      1  100.0%        LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:103:28
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:31:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    2.8%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:42:35
+      1  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:157:19
+      1  100.0%          Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/finalhandler/node_modules/debug/src/node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1066:37
+      1    2.8%      LazyCompile: ~compareTopologyVersion /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/server_description.js:184:32
+      1  100.0%        Function: ^isStaleServerDescription /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:643:34
+      1  100.0%          Function: ^serverUpdateHandler /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:372:24
+      1  100.0%            Function: ^<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/sdam/topology.js:535:53
+      1    2.8%      LazyCompile: ~command /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connection.js:247:12
+      1  100.0%        LazyCompile: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:139:34
+      1  100.0%            LazyCompile: ~performInitialHandshake /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/connect.js:62:33
+      1    2.8%      LazyCompile: ~checkServerIdentity node:tls:281:59
+      1  100.0%        LazyCompile: ~onConnectSecure node:_tls_wrap:1519:25
+      1  100.0%          Function: ^emit node:events:484:44
+      1  100.0%            LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:921:43
+      1    2.8%      LazyCompile: ~check node:internal/crypto/pbkdf2:89:15
+      1  100.0%        LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+      1  100.0%          LazyCompile: ~HI /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/auth/scram.js:227:12
+      1  100.0%            LazyCompile: ~continueScramConversation /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1    2.8%      LazyCompile: *realpathSync node:fs:2474:22
+      1  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:399:20
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:390:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:406:23
+      1    2.8%      LazyCompile: *readPackageScope node:internal/modules/cjs/loader:327:26
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:976:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1    2.8%      LazyCompile: *Module._findPath node:internal/modules/cjs/loader:500:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:860:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+      1    2.8%      LazyCompile: *FastBuffer node:internal/buffer:958:14
+      1  100.0%        Function: ^alloc node:buffer:363:30
+      1  100.0%          Function: ^serialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/bson.js:111:19
+      1  100.0%            Function: ^serializeBson /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:530:18
+      1    2.8%      Function: ~<anonymous> node:zlib:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      1  100.0%            Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1    2.8%      Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/yargs-parser/build/index.cjs:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:976:33
+      1    2.8%      Function: ^serializeBinary /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:459:25
+      1  100.0%        LazyCompile: *serializeInto /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%          LazyCompile: *serializeInto /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%            LazyCompile: *serializeInto /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:550:23
+      1    2.8%      Function: ^parserOnHeadersComplete node:_http_common:72:33
+      1    2.8%      Function: ^parse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/content-type/index.js:106:16
+      1  100.0%        Function: ^setCharset /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/utils.js:247:41
+      1  100.0%          Function: ^send /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/response.js:107:25
+      1  100.0%            Function: ^done /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/express/lib/response.js:1011:27
+      1    2.8%      Function: ^afterWriteDispatched node:internal/stream_base_commons:155:30
+      1  100.0%        Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      1  100.0%          Function: ^Socket._writeGeneric node:net:837:42
+      1  100.0%            Function: ^Socket._writev node:net:869:36
+      1    2.8%      Function: ^_copyActual node:buffer:245:21
+      1  100.0%        Function: ^concat node:buffer:539:32
+      1  100.0%          Function: ^read /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/utils.js:876:9
+      1  100.0%            Function: ^processIncomingData /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    2.8%      Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1  100.0%            Function: ~<anonymous> /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/faker/lib/locales/es_MX/commerce/index.js:1:1
+      1    2.8%      Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      1  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:976:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+      4    5.5%    LazyCompile: *compileFunction node:vm:309:25
+      4  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1024:18
+      4  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1066:37
+      4  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1121:37
+      3   75.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:766:24
+      1   25.0%            Function: ^Module.load node:internal/modules/cjs/loader:976:33
+      1    1.4%    LazyCompile: *write node:buffer:596:12
+      1  100.0%      LazyCompile: *write node:buffer:1055:40
+      1  100.0%        LazyCompile: *serializeInto /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%          LazyCompile: *serializeInto /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%            LazyCompile: *serializeInto /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/serializer.js:550:23
+      1    1.4%    LazyCompile: *slice node:buffer:597:12
+      1  100.0%      LazyCompile: *deserializeObject /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%        Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%          Function: ^deserialize /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/bson/lib/bson.js:162:21
+      1  100.0%            Function: ^parse /home/ivan/CODERHOUSE PROGRAMACION BACKEND 2022/DESAFIO 16/node_modules/mongodb/lib/cmap/commands.js:577:10
+      1    1.4%    LazyCompile: *realpathSync node:fs:2474:22
+      1  100.0%      LazyCompile: *Module._findPath node:internal/modules/cjs/loader:500:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:860:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:766:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1004:36
+
